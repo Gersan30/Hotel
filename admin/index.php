@@ -86,7 +86,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   $myusername = mysqli_real_escape_string($con, $_POST['user']);
   $mypassword = mysqli_real_escape_string($con, $_POST['pass']);
 
-  $sql = "SELECT id FROM login WHERE usname = '$myusername' and pass = '$mypassword'";
+  $sql = "SELECT id FROM usuario WHERE usuario = '$myusername' and contraseña = '$mypassword'";
   $result = mysqli_query($con, $sql);
   $row = mysqli_fetch_array($result, MYSQLI_ASSOC);
   $active = $row['active'];
@@ -99,7 +99,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     $_SESSION['user'] = $myusername;
 
-    header("location: home.php");
+    header("location: view/index2.php");
   } else {
     echo '<script>alert("Your Login Name or Password is invalid") </script>';
   }
