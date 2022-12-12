@@ -181,10 +181,7 @@
                 </div>
             </div>
         </div>
-        <!-- Booking End -->
-
-
-        <!-- About Start -->
+        
         <div class="container-xxl py-5">
             <div class="container">
                 <div class="row g-5 align-items-center">
