@@ -10,7 +10,7 @@ require "../view/template/header.php";
 <div class="right_col" role="main">
     <div class="x_panel">
         <div class="x_title">
-            <h2>Categorias de Habitaciones<small>Todos los campos son</small></h2>
+            <h2>Cargos<small>Todos los campos son</small></h2>
             <ul class="nav navbar-right panel_toolbox">
                 <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
                 </li>
@@ -21,26 +21,39 @@ require "../view/template/header.php";
             <br />
             <form class="form-inline">
                 <div class="form-group">
-                    <label class="col-form-label" for="first-name">Nombre Categoria<span class="required">*</span>
+                    <label class="col-form-label" for="first-name">Nombre Cargo<span class="required">*</span>
                     </label>
                     <div class="col-md-6">
                         <input type="text" id="first-name2" required="required" class="form-control">
                     </div>
                 </div>
                 <div class="form-group">
-                    <label class="control-label col-md-3" for="last-name">Estado<span class="required">*</span>
+                    <label class="control-label col-md-3" for="last-name">Salario<span class="required">*</span>
                     </label>
                     <div class="col-md-7">
-                        <input type="text" id="last-name2" name="last-name" required="required" class="form-control">
+                        <input type="number" id="last-name2" name="last-name" required="required" class="form-control">
                     </div>
                 </div>
-                <div class="form-group">
-                    <div class="col-md-7">
-                        <button type="button" class="btn btn-round btn-success form-control">Agregar</button>
-                    </div>
+                <div class="form-group row">
+                    <label class="control-label col-md-3" for="last-name">Estado<span class="required">*</span>
+                    </label>
+                    <select class="form-control">
+                        <option>Seleccionar estado</option>
+                        <div class="col-md-9 col-sm-9 ">
+                            <option>Activo</option>
+                            <option>Inactivo</option>
+                            <option>Suspendido</option>
+                            <option>Caducable</option>
+                    </select>
                 </div>
             </form>
         </div>
+        <div class="form-group">
+            <div class="col-md-7">
+                <button type="button" class="btn btn-round btn-success form-control">Agregar</button>
+            </div>
+        </div>
+
     </div>
     <div class="x_panel">
         <div class="x_title">
@@ -59,9 +72,9 @@ require "../view/template/header.php";
                             style="width:100%">
                             <thead>
                                 <tr>
-                                    <th>Nombre</th>
+                                    <th>Numero</th>
+                                    <th>Usuario</th>
                                     <th>Estado</th>
-                                    <th>Operacion</th>
                                 </tr>
                             </thead>
                             <tbody>

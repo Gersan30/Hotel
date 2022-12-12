@@ -10,7 +10,7 @@ require "../view/template/header.php";
 <div class="right_col" role="main">
     <div class="x_panel">
         <div class="x_title">
-            <h2>Categorias de Habitaciones<small>Todos los campos son</small></h2>
+            <h2>Usuarios<small>Todos los campos son</small></h2>
             <ul class="nav navbar-right panel_toolbox">
                 <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
                 </li>
@@ -21,7 +21,7 @@ require "../view/template/header.php";
             <br />
             <form class="form-inline">
                 <div class="form-group">
-                    <label class="col-form-label" for="first-name">Nombre Categoria<span class="required">*</span>
+                    <label class="col-form-label" for="first-name">Nombre Usuario<span class="required">*</span>
                     </label>
                     <div class="col-md-6">
                         <input type="text" id="first-name2" required="required" class="form-control">
@@ -32,6 +32,17 @@ require "../view/template/header.php";
                     </label>
                     <div class="col-md-7">
                         <input type="text" id="last-name2" name="last-name" required="required" class="form-control">
+                    </div>
+                </div>
+                <div class="row m-4">
+                    <label class="col-form-label col-md-3">Seleccionar</label>
+                    <div class="col-md-6">
+                        <select class="form-control">
+                            <option>Coloborador</option>
+                            <div class="col-3">
+                             
+                            </div>
+                        </select>
                     </div>
                 </div>
                 <div class="form-group">
@@ -59,9 +70,9 @@ require "../view/template/header.php";
                             style="width:100%">
                             <thead>
                                 <tr>
-                                    <th>Nombre</th>
+                                    <th>Numero</th>
+                                    <th>Usuario</th>
                                     <th>Estado</th>
-                                    <th>Operacion</th>
                                 </tr>
                             </thead>
                             <tbody>

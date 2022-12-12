@@ -20,96 +20,130 @@ require "../view/template/header.php";
         <div class="x_content">
             <br />
             <form class="form-vertical">
-                <div class="item form-group">
-                    <label class="col-form-label col-md-3 col-sm-3 label-align" for="first-name">Numero Habitacion<span class="required">*</span>
-                    </label>
+                <div class="row">
                     <div class="col-md-4">
-                        <input type="text" id="first-name2" required="required" class="form-control">
+                        <label class="col-form-label col-md-3 col-sm-3 label-align" for="first-name">Numero
+                            Habitacion<span class="required">*</span>
+                        </label>
+                        <div class="col-md-8">
+                            <input type="text" id="first-name2" required="required" class="form-control">
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <label class="col-form-label col-md-3 col-sm-3 label-align" for="last-name">Nombre
+                            Habitacion<span class="required">*</span>
+                        </label>
+                        <div class="col-md-8">
+                            <input type="text" id="last-name2" name="last-name" required="required"
+                                class="form-control">
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <label class="col-form-label col-md-3 col-sm-3 label-align">Precio de habitacion</label>
+                        <div class="col-md-8">
+                            <input type="number" class="form-control" placeholder="Solo numero">
+                        </div>
                     </div>
                 </div>
-                <div class="item form-group">
-                    <label class="col-form-label col-md-3 col-sm-3 label-align" for="last-name">Nombre Habitacion<span
-                            class="required">*</span>
-                    </label>
+                <div class="row mt-2">
                     <div class="col-md-4">
-                        <input type="text" id="last-name2" name="last-name" required="required" class="form-control">
+                        <label class="col-form-label col-md-3 col-sm-3 label-align" for="last-name">Capacidad<span
+                                class="required">*</span>
+                        </label>
+                        <div class="col-md-8">
+                            <input type="text" id="last-name2" name="last-name" required="required"
+                                class="form-control">
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <label class="col-form-label col-md-3 col-sm-3 label-align" for="last-name">Tamaño<span
+                                class="required">*</span>
+                        </label>
+                        <div class="col-md-8">
+                            <input type="text" id="last-name2" name="last-name" required="required"
+                                class="form-control">
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <label class="col-form-label col-md-3" for="last-name">Cantidad<span class="required">*</span>
+                        </label>
+                        <div class="col-md-8">
+                            <input type="text" id="last-name2" name="last-name" required="required"
+                                class="form-control">
+                        </div>
                     </div>
                 </div>
-                <div class="item form-group">
-                    <label class="col-form-label col-md-3 col-sm-3 label-align">Precio de habitacion</label>
-                    <div class="col-md-4 ">
-                        <input type="number" class="form-control" placeholder="Solo numero">
+                <div class="row mt-3">
+                    <div class="col-md-4">
+                        <label class="col-form-label col-md-3" for="last-name">Descripcion<span
+                                class="required">*</span>
+                        </label>
+                        <div class="col-md-8">
+                            <input type="text" id="last-name2" name="last-name" required="required"
+                                class="form-control">
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <label class="col-form-label col-md-3" for="last-name">numero camas<span
+                                class="required">*</span>
+                        </label>
+                        <div class="col-md-8">
+                            <input type="text" id="last-name2" name="last-name" required="required"
+                                class="form-control">
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <label class="col-form-label col-md-3 col-sm-3 label-align" for="last-name">Modelo de cama<span
+                                class="required">*</span>
+                        </label>
+                        <div class="col-md-8">
+                            <input type="text" id="last-name2" name="last-name" required="required"
+                                class="form-control">
+                        </div>
                     </div>
                 </div>
-                <div class="item form-group">
-                    <label class="col-form-label col-md-3 col-sm-3 label-align" for="last-name">Capacidad<span class="required">*</span>
-                    </label>
+
+                <div class="row mt-3">
                     <div class="col-md-4">
-                        <input type="text" id="last-name2" name="last-name" required="required" class="form-control">
+                        <label class="col-form-label col-md-3" for="last-name">Otros detalles<span
+                                class="required">*</span>
+                        </label>
+                        <div class="col-md-8">
+                            <input type="text" id="last-name2" name="last-name" required="required"
+                                class="form-control">
+                        </div>
                     </div>
-                </div>
-                <div class="item form-group">
-                    <label class="col-form-label col-md-3 col-sm-3 label-align" for="last-name">Tamaño<span class="required">*</span>
-                    </label>
                     <div class="col-md-4">
-                        <input type="text" id="last-name2" name="last-name" required="required" class="form-control">
+                        <label class="col-form-label col-md-3">Seleccionar</label>
+                        <div class="col-md-9">
+                            <select class="form-control">
+                                <option>Estado de la habitacion</option>
+                                <div class="col-3">
+                                    <option>Reservada</option>
+                                    <option>Disponible</option>
+                                    <option>Mantenimiento</option>
+                                </div>
+                            </select>
+                        </div>
                     </div>
-                </div>
-                <div class="item form-group">
-                    <label class="col-form-label col-md-3 col-sm-3 label-align" for="last-name">Cantidad<span class="required">*</span>
-                    </label>
-                    <div class="col-md-4">
-                        <input type="text" id="last-name2" name="last-name" required="required" class="form-control">
-                    </div>
-                </div>
-                <div class="item form-group">
-                    <label class="col-form-label col-md-3 col-sm-3 label-align" for="last-name">Descripcion<span class="required">*</span>
-                    </label>
-                    <div class="col-md-4">
-                        <input type="text" id="last-name2" name="last-name" required="required" class="form-control">
-                    </div>
-                </div>
-                <div class="item form-group">
-                    <label class="col-form-label col-md-3 col-sm-3 label-align" for="last-name">Cantidad de camas<span class="required">*</span>
-                    </label>
-                    <div class="col-md-4">
-                        <input type="text" id="last-name2" name="last-name" required="required" class="form-control">
-                    </div>
-                </div>
-                <div class="item form-group">
-                    <label class="col-form-label col-md-3 col-sm-3 label-align" for="last-name">Modelo de cama<span class="required">*</span>
-                    </label>
-                    <div class="col-md-4">
-                        <input type="text" id="last-name2" name="last-name" required="required" class="form-control">
-                    </div>
-                </div>
-                <div class="item form-group">
-                    <label class="col-form-label col-md-3 col-sm-3 label-align" for="last-name">Otros detalles<span class="required">*</span>
-                    </label>
-                    <div class="col-md-4">
-                        <input type="text" id="last-name2" name="last-name" required="required" class="form-control">
-                    </div>
-                </div>
-                <div class="item form-group">
-                    <label class="col-form-label col-md-3 col-sm-3 label-align" for="last-name">Estado<span class="required">*</span>
-                    </label>
-                    <div class="col-md-4">
-                        <input type="text" id="last-name2" name="last-name" required="required" class="form-control">
-                    </div>
-                </div>
-                <div class="item form-group">
-                    <div class="col-md-4">
-                        <button type="button" class="btn btn-round btn-success form-control">Agregar</button>
-                    </div>
+
                 </div>
             </form>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="col-md-5">
+                        <button class="btn btn-round btn-success" type="button">Agregar</button>
+                    </div>
+                    <button type="button" class="btn btn-round btn-warning ">Editar</button>
+
+                </div>
+
+            </div>
         </div>
-
-
     </div>
     <div class="x_panel">
         <div class="x_title">
-            <h2>Lista de categoria<small>**</small></h2>
+            <h2>Lista de habitaciones<small>**</small></h2>
             <ul class="nav navbar-right panel_toolbox">
                 <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
                 </li>

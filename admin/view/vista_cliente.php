@@ -20,54 +20,134 @@ require "../view/template/header.php";
         <div class="x_content">
             <br />
             <form class="form-inline">
-                <div class="form-group">
-                    <label class="col-form-label" for="first-name">Nombre<span class="required">*</span>
-                    </label>
+                <div class="row">
+                    <div class="col-md-4">
+                        <label class="col-form-label col-md-3" for="first-name">Nombre<span class="required">*</span>
+                        </label>
+                        <div class="col-md-6">
+                            <input type="text" id="first-name2" required="required" class="form-control" required>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <label class="col-form-label col-md-3" for="last-name">Apellido/Razon social<span
+                                class="required">*</span>
+                        </label>
+                        <div class="col-md-7">
+                            <input type="text" id="last-name2" name="last-name" required="required"
+                                class="form-control">
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <label class="col-form-label col-md-3" for="last-name">Cedula/RUC<span class="required">*</span>
+                        </label>
+                        <div class="col-md-6">
+                            <input type="text" id="last-name2" name="last-name" required="required"
+                                class="form-control">
+                        </div>
+                    </div>
+                </div>
+                <div class="row mt-2">
+                    <div class="col-md-4">
+                        <label class="col-form-label col-md-3" for="last-name">Fecha de nacimiento<span
+                                class="required">*</span>
+                        </label>
+                        <div class="col-md-6 ">
+                            <input type="text" class="form-control" id="single_cal3" placeholder="fecha de nacimiento"
+                                aria-describedby="inputSuccess2Status3">
+                            <span class="fa fa-calendar-o form-control-feedback left" aria-hidden="true"></span>
+                            <span id="inputSuccess2Status3" class="sr-only">(success)</span>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <label class="col-form-label col-md-3" for="last-name">Direccion<span class="required">*</span>
+                        </label>
+                        <div class="col-md-7">
+                            <input type="text" id="last-name2" name="last-name" required="required"
+                                class="form-control">
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <label class="col-form-label col-md-3" for="last-name">Telefono-Celular<span
+                                class="required">*</span>
+                        </label>
+                        <div class="col-md-6">
+                            <input type="number" id="last-name2" name="last-name" required="required"
+                                class="form-control">
+                        </div>
+                    </div>
+                </div>
+                <div class="row mt-3">
+                    <div class="col-md-4">
+                        <label class="col-form-label col-md-3" for="last-name">correo<span class="required">*</span>
+                        </label>
+                        <div class="col-md-7">
+                            <input type="email" id="last-name2" name="last-name" required="required"
+                                class="form-control">
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <label class="col-form-label col-md-3" for="last-name">Nacionalidad<span
+                                class="required">*</span>
+                        </label>
+                        <div class="col-md-6">
+                            <input type="text" id="last-name2" name="last-name" required="required"
+                                class="form-control">
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <label class="col-form-label col-md-3" for="last-name">Descripcion<span
+                                class="required">*</span>
+                        </label>
+                        <div class="col-md-6">
+                            <input type="text" id="last-name2" name="last-name" required="required"
+                                class="form-control">
+                        </div>
+                    </div>
+                </div>
+                <div class="row m-3">
+                    <label class="col-form-label col-md-3">Seleccionar</label>
                     <div class="col-md-6">
-                        <input type="text" id="first-name2" required="required" class="form-control">
+                        <select class="form-control">
+                            <option>Tipo de cliente</option>
+                            <div class="col-3">
+                                <option>Natural</option>
+                                <option>Juridico</option>
+                            </div>
+                        </select>
                     </div>
                 </div>
-                <div class="form-group">
-                    <label class="control-label col-md-3" for="last-name">Apellido<span class="required">*</span>
-                    </label>
-                    <div class="col-md-7">
-                        <input type="text" id="last-name2" name="last-name" required="required" class="form-control">
-                    </div>
-                </div>
-                <div class="form-group">
-                    <label class="control-label col-md-3" for="last-name">Cedula<span class="required">*</span>
-                    </label>
-                    <div class="col-md-7">
-                        <input type="text" id="last-name2" name="last-name" required="required" class="form-control">
-                    </div>
-                </div>
-                <div class="form-group">
-                    <label class="control-label col-md-3" for="last-name">Fecha de nacimiento<span class="required">*</span>
-                    </label>
-                    <div class="col-md-7">
-                        <input type="text" id="last-name2" name="last-name" required="required" class="form-control">
-                    </div>
-                </div>
-                <div class="form-group">
-                    <label class="control-label col-md-3" for="last-name">Direccion<span class="required">*</span>
-                    </label>
-                    <div class="col-md-7">
-                        <input type="text" id="last-name2" name="last-name" required="required" class="form-control">
-                    </div>
-                </div>
-                <div class="form-group">
-                    <div class="col-md-7">
-                        <button type="button" class="btn btn-round btn-success form-control">Agregar</button>
+                <div class="row m-4"></div>
+                <div class="row m-3">
+                    <label class="col-form-label col-md-3">Estado</label>
+                    <div class="col-md-6">
+                        <select class="form-control">
+                            <option>Estado de cliente</option>
+                            <div class="col-3">
+                                <option>Activo</option>
+                                <option>Inactivo</option>
+                            </div>
+                        </select>
                     </div>
                 </div>
             </form>
+            <div class="row">
+                <div class="col-md-4">
+                    <button type="button" class="btn btn-round btn-success ">Agregar</button>
+                </div>
+                <div class="col-md-7">
+                    <button class="btn btn-round btn-warning" type="button">Editar</button>
+                </div>
+            </div>
         </div>
-
-
     </div>
+
+
+
+
     <div class="x_panel">
         <div class="x_title">
-            <h2>Lista de categoria<small>**</small></h2>
+            <h2>Lista de cliente<small>**</small></h2>
             <ul class="nav navbar-right panel_toolbox">
                 <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
                 </li>
@@ -82,9 +162,9 @@ require "../view/template/header.php";
                             style="width:100%">
                             <thead>
                                 <tr>
-                                    <th>Nombre</th>
+                                    <th>Numero</th>
+                                    <th>Usuario</th>
                                     <th>Estado</th>
-                                    <th>Operacion</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -92,12 +172,8 @@ require "../view/template/header.php";
                                     <td>Tiger Nixon</td>
                                     <td>System Architect</td>
                                     <td>
-                                        <div class="form-group">
-                                            <div class="col-md-7">
-                                                <button class="btn btn-round btn-warning form-control"
-                                                    type="button">Editar</button>
-                                            </div>
-                                        </div>
+                                        <button class="btn btn-round btn-warning form-control"
+                                            type="button">Editar</button>
                                     </td>
                                 </tr>
                             </tbody>
@@ -107,10 +183,45 @@ require "../view/template/header.php";
             </div>
         </div>
     </div>
+
 </div>
+
 <?php
 require "../view/template/footer.php";
 ?>
+<!-- Initialize datetimepicker -->
+<script type="text/javascript">
+    $(function () {
+        $('#myDatepicker').datetimepicker();
+    });
+
+    $('#myDatepicker2').datetimepicker({
+        format: 'DD.MM.YYYY'
+    });
+
+    $('#myDatepicker3').datetimepicker({
+        format: 'hh:mm A'
+    });
+
+    $('#myDatepicker4').datetimepicker({
+        ignoreReadonly: true,
+        allowInputToggle: true
+    });
+
+    $('#datetimepicker6').datetimepicker();
+
+    $('#datetimepicker7').datetimepicker({
+        useCurrent: false
+    });
+
+    $("#datetimepicker6").on("dp.change", function (e) {
+        $('#datetimepicker7').data("DateTimePicker").minDate(e.date);
+    });
+
+    $("#datetimepicker7").on("dp.change", function (e) {
+        $('#datetimepicker6').data("DateTimePicker").maxDate(e.date);
+    });
+</script>
 <!-- NProgress -->
 <script src="../view/vendors/nprogress/nprogress.js"></script>
 <!-- iCheck -->
