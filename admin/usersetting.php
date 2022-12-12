@@ -134,9 +134,9 @@ ob_start();
 													<td>".$ps."</td>
 													
 													<td><button class='btn btn-primary btn' data-toggle='modal' data-target='#myModal'>
-															 Update 
+															 Actualizar 
 													</button></td>
-													<td><a href=usersettingdel.php?eid=".$id ." <button class='btn btn-danger'> <i class='fa fa-edit' ></i> Delete</button></td>
+													<td><a href=usersettingdel.php?eid=".$id ." <button class='btn btn-danger'> <i class='fa fa-edit' ></i> Eliminar</button></td>
 												</tr>";
 											}
 											else
@@ -147,9 +147,9 @@ ob_start();
 													<td>".$ps."</td>
 													
 													<td><button class='btn btn-primary btn' data-toggle='modal' data-target='#myModal'>
-                              Update 
+                              Actualizar 
                             </button></td>
-													<td><a href=usersettingdel.php?eid=".$id ." <button class='btn btn-danger'> <i class='fa fa-edit' ></i> Delete</button></td>
+													<td><a href=usersettingdel.php?eid=".$id ." <button class='btn btn-danger'> <i class='fa fa-edit' ></i> Eliminar</button></td>
 												</tr>";
 											
 											}

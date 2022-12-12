@@ -7,6 +7,12 @@ require "../view/template/header.php";
 <link href="../view/vendors/datatables.net-fixedheader-bs/css/fixedHeader.bootstrap.min.css" rel="stylesheet">
 <link href="../view/vendors/datatables.net-responsive-bs/css/responsive.bootstrap.min.css" rel="stylesheet">
 <link href="../view/vendors/datatables.net-scroller-bs/css/scroller.bootstrap.min.css" rel="stylesheet">
+<?php
+    include_once "conexion.php";
+    $sentencia = $bd -> query("select * from habitacion_h");
+    $persona = $sentencia->fetchAll(PDO::FETCH_OBJ);
+    //print_r($persona);
+?>
 <div class="right_col" role="main">
     <div class="x_panel">
         <div class="x_title">
@@ -19,12 +25,12 @@ require "../view/template/header.php";
         </div>
         <div class="x_content">
             <br />
-            <form class="form-vertical">
+            <form class="form-vertical" method="POST" action="registroHab.php">
                 <div class="item form-group">
                     <label class="col-form-label col-md-3 col-sm-3 label-align" for="first-name">Numero Habitacion<span class="required">*</span>
                     </label>
                     <div class="col-md-4">
-                        <input type="text" id="first-name2" required="required" class="form-control">
+                        <input type="text" id="first-name2" name="A"required="required" class="form-control">
                     </div>
                 </div>
                 <div class="item form-group">
@@ -32,74 +38,74 @@ require "../view/template/header.php";
                             class="required">*</span>
                     </label>
                     <div class="col-md-4">
-                        <input type="text" id="last-name2" name="last-name" required="required" class="form-control">
+                        <input type="text" id="last-name2"  name="B" required="required" class="form-control">
                     </div>
                 </div>
                 <div class="item form-group">
                     <label class="col-form-label col-md-3 col-sm-3 label-align">Precio de habitacion</label>
                     <div class="col-md-4 ">
-                        <input type="number" class="form-control" placeholder="Solo numero">
+                        <input type="number" class="form-control" name="C" placeholder="Solo numero">
                     </div>
                 </div>
                 <div class="item form-group">
                     <label class="col-form-label col-md-3 col-sm-3 label-align" for="last-name">Capacidad<span class="required">*</span>
                     </label>
                     <div class="col-md-4">
-                        <input type="text" id="last-name2" name="last-name" required="required" class="form-control">
+                        <input type="text" id="last-name2"  name="D"required="required" class="form-control">
                     </div>
                 </div>
                 <div class="item form-group">
                     <label class="col-form-label col-md-3 col-sm-3 label-align" for="last-name">Tamaño<span class="required">*</span>
                     </label>
                     <div class="col-md-4">
-                        <input type="text" id="last-name2" name="last-name" required="required" class="form-control">
+                        <input type="text" id="last-name2" name="E" required="required" class="form-control">
                     </div>
                 </div>
                 <div class="item form-group">
                     <label class="col-form-label col-md-3 col-sm-3 label-align" for="last-name">Cantidad<span class="required">*</span>
                     </label>
                     <div class="col-md-4">
-                        <input type="text" id="last-name2" name="last-name" required="required" class="form-control">
+                        <input type="text" id="last-name2"  name="F" required="required" class="form-control">
                     </div>
                 </div>
                 <div class="item form-group">
                     <label class="col-form-label col-md-3 col-sm-3 label-align" for="last-name">Descripcion<span class="required">*</span>
                     </label>
                     <div class="col-md-4">
-                        <input type="text" id="last-name2" name="last-name" required="required" class="form-control">
+                        <input type="text" id="last-name2"  name="G" required="required" class="form-control">
                     </div>
                 </div>
                 <div class="item form-group">
                     <label class="col-form-label col-md-3 col-sm-3 label-align" for="last-name">Cantidad de camas<span class="required">*</span>
                     </label>
                     <div class="col-md-4">
-                        <input type="text" id="last-name2" name="last-name" required="required" class="form-control">
+                        <input type="text" id="last-name2"  name="H" required="required" class="form-control">
                     </div>
                 </div>
                 <div class="item form-group">
                     <label class="col-form-label col-md-3 col-sm-3 label-align" for="last-name">Modelo de cama<span class="required">*</span>
                     </label>
                     <div class="col-md-4">
-                        <input type="text" id="last-name2" name="last-name" required="required" class="form-control">
+                        <input type="text" id="last-name2"  name="I" required="required" class="form-control">
                     </div>
                 </div>
                 <div class="item form-group">
                     <label class="col-form-label col-md-3 col-sm-3 label-align" for="last-name">Otros detalles<span class="required">*</span>
                     </label>
                     <div class="col-md-4">
-                        <input type="text" id="last-name2" name="last-name" required="required" class="form-control">
+                        <input type="text" id="last-name2"  name="J" required="required" class="form-control">
                     </div>
                 </div>
                 <div class="item form-group">
                     <label class="col-form-label col-md-3 col-sm-3 label-align" for="last-name">Estado<span class="required">*</span>
                     </label>
                     <div class="col-md-4">
-                        <input type="text" id="last-name2" name="last-name" required="required" class="form-control">
+                        <input type="text" id="last-name2"  name="K" required="required" class="form-control">
                     </div>
                 </div>
                 <div class="item form-group">
                     <div class="col-md-4">
-                        <button type="button" class="btn btn-round btn-success form-control">Agregar</button>
+                        <button type="submit" class="btn btn-round btn-success form-control">Agregar</button>
                     </div>
                 </div>
             </form>
@@ -124,24 +130,25 @@ require "../view/template/header.php";
                             style="width:100%">
                             <thead>
                                 <tr>
-                                    <th>Nombre</th>
+                                    <th>Nombre Habitacion</th>
+                                    <th>Precio</th>
                                     <th>Estado</th>
-                                    <th>Operacion</th>
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr>
-                                    <td>Tiger Nixon</td>
-                                    <td>System Architect</td>
-                                    <td>
-                                        <div class="form-group">
-                                            <div class="col-md-7">
-                                                <button class="btn btn-round btn-warning form-control"
-                                                    type="button">Editar</button>
-                                            </div>
-                                        </div>
-                                    </td>
-                                </tr>
+                            <?php 
+                                foreach($persona as $dato){ 
+                            ?>
+
+                            <tr>
+                                <td scope="row"><?php echo $dato->Nombre_Hab; ?></td>
+                                <td><?php echo $dato->Precio; ?></td>
+                                <td><?php echo $dato->Estado; ?></td>
+                            </tr>
+
+                            <?php 
+                                }
+                            ?>
                             </tbody>
                         </table>
                     </div>

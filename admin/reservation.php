@@ -202,10 +202,10 @@ INFORMACION PERSONAL
 </label>
                                             <select name="bed" class="form-control" required>
 												<option value selected ></option>
-                                                <option value="Single">1</option>
-                                                <option value="Double">2</option>
-												<option value="Triple">3</option>
-                                                <option value="Quad">4</option>
+                                                <option value="p1">1</option>
+                                                <option value="p2">2</option>
+												<option value="p3">3</option>
+                                                <option value="'4">4</option>
 												<option value="None">Ninguna</option>
                                                 
                                              

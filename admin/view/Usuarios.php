@@ -12,14 +12,14 @@ require "../view/template/header.php";
 
 <?php
     include_once "conexion.php";
-    $sentencia = $bd -> query("select * from categoriahab");
+    $sentencia = $bd -> query("select * from usuario");
     $persona = $sentencia->fetchAll(PDO::FETCH_OBJ);
     //print_r($persona);
 ?>
 <div class="right_col" role="main">
     <div class="x_panel">
         <div class="x_title">
-            <h2>Categorias de Habitaciones<small>Todos los campos son</small></h2>
+            <h2>Categorias de usuarios<small>Todos los campos son</small></h2>
             <ul class="nav navbar-right panel_toolbox">
                 <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
                 </li>
@@ -28,19 +28,19 @@ require "../view/template/header.php";
         </div>
         <div class="x_content">
             <br />
-            <form class="form-inline" method="POST" action="registroCat.php" >
+            <form class="form-inline" method="POST" action="UsuariosRegistro.php" >
                 <div class="form-group">
-                    <label class="col-form-label" for="first-name">Nombre Categoria<span class="required">*</span>
+                    <label class="col-form-label" for="first-name">Nombre usuario<span class="required">*</span>
                     </label>
                     <div class="col-md-6">
-                        <input type="text" id="first-name2" name="Nom" required="required" class="form-control">
+                        <input type="text" id="first-name2" name="US" required="required" class="form-control">
                     </div>
                 </div>
                 <div class="form-group">
-                    <label class="control-label col-md-3" for="last-name">Estado<span class="required">*</span>
+                    <label class="control-label col-md-3" for="last-name">Contraseña<span class="required">*</span>
                     </label>
                     <div class="col-md-7">
-                        <input type="text" id="last-name2"  name="Est" required="required" class="form-control">
+                        <input type="text" id="last-name2"  name="CON" required="required" class="form-control">
                     </div>
                 </div>
                 <div class="form-group">
@@ -55,7 +55,7 @@ require "../view/template/header.php";
     </div>
     <div class="x_panel">
         <div class="x_title">
-            <h2>Lista de categoria<small>**</small></h2>
+            <h2>Lista de usuarios<small>**</small></h2>
             <ul class="nav navbar-right panel_toolbox">
                 <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
                 </li>
@@ -71,8 +71,8 @@ require "../view/template/header.php";
                             <thead>
                                 <tr>
                                     <th>ID</th>
-                                    <th>Nombre</th>
-                                    <th>Estado</th>
+                                    <th>Usuario</th>
+                                    <th>Contraseña</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -81,9 +81,9 @@ require "../view/template/header.php";
                             ?>
 
                             <tr>
-                                <td scope="row"><?php echo $dato->ID_CAT; ?></td>
-                                <td><?php echo $dato->Nombre_cat; ?></td>
-                                <td><?php echo $dato->Estado; ?></td>
+                                <td scope="row"><?php echo $dato->id; ?></td>
+                                <td><?php echo $dato->usuario; ?></td>
+                                <td><?php echo $dato->contraseña; ?></td>
                             </tr>
 
                             <?php 
