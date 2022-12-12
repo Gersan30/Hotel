@@ -51,12 +51,13 @@ require "../view/template/header.php";
                         <label class="col-form-label col-md-3" for="last-name">Fecha de nacimiento<span
                                 class="required">*</span>
                         </label>
-                        <div class="col-md-6 ">
-                            <input type="text" class="form-control" id="single_cal3" placeholder="fecha de nacimiento"
+                        <div class="col-md-5  ">
+                            <input type="text" class="form-control has-feedback-left" id="single_cal3"
                                 aria-describedby="inputSuccess2Status3">
                             <span class="fa fa-calendar-o form-control-feedback left" aria-hidden="true"></span>
                             <span id="inputSuccess2Status3" class="sr-only">(success)</span>
                         </div>
+
                     </div>
                     <div class="col-md-4">
                         <label class="col-form-label col-md-3" for="last-name">Direccion<span class="required">*</span>
